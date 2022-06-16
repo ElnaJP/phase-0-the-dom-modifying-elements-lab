@@ -282,7 +282,9 @@ What if we want to remove the whole unordered list (`ul`)?
 We can just call `remove()` on the element itself:
 
 ```js
-ul.remove();
+const ul = document.getElementsByTagName("ul")[0];
+const secondChild = ul.querySelector("li:nth-child(2)");
+ul.removeChild(secondChild);
 ```
 
 And it's gone!
